@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: linear-gradient(to bottom, rgb(0, 123, 255), blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+nav .bars {
+  display: none;
+}
+
+nav .menu .mark {
+  display: none;
+}
+
+header {
+  background-color: #0080ff;
+}
+
+header .right {
+  background: url(../public/image/Header/bg.png) no-repeat center;
+  background-size: cover;
+}
+
+header .right .header__right-container {
+  background: url(../public/image/Header/bakcground.png) no-repeat center;
+  background-size: 80%;
+}
+
+.mySwiper2 {
+  display: flex;
+  align-items: center;
+}
+
+.gallary__slider__images-group {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallary__slider__images-group img {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.gallary__slider__images__bottom-group img {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px !important;
+  height: 50px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #000;
+}
+
+.business-time {
+  background: linear-gradient(
+    to right top,
+    red 30%,
+    blue 50%,
+    rgb(255, 157, 0) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+  nav .brand {
+    width: 70%;
+    justify-content: center;
+  }
+  nav .brand img {
+    width: 80px;
+  }
+  nav .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.5s linear;
+    scale: 0;
+    background-color: #fff;
+  }
+  nav .menu.navbar__menu-active {
+    scale: 1;
+  }
+  nav .menu .mark {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 25px;
+    display: flex;
+    cursor: pointer;
+  }
+  nav .menu a {
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: blue;
+  }
+  nav .menu a:hover {
+    background-color: #fff !important;
+    color: #0080ff !important;
+    border: 1px solid #0080ff;
+  }
+  nav .menu a::before {
+    background: transparent;
+  }
+  nav .bars {
+    width: 30%;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+  .nav-top {
+    flex-direction: column;
+  }
+  .nav-top :where(.left, .right) {
+    width: 100% !important;
+  }
+  header {
+    flex-direction: column-reverse;
+  }
+  header .left {
+    min-height: 50vh;
+  }
+  header :where(.left, .right) {
+    padding: 0 0 0 10px !important;
+    width: 100% !important;
+  }
+  header .left h1 {
+    font-size: 25px;
+  }
+  header .left h4 {
+    font-size: 16px;
+  }
+  header .left h3 {
+    font-size: 18px;
+  }
+  header .right .header__right-container {
+    background-size: cover;
+    background-position-x: -60px;
+    padding: 20px 20px 0 0;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about :where(.left, .right) {
+    width: 100%;
+  }
+  .about .right {
+    padding: 20px;
+  }
+  .about .right h1 {
+    font-size: 30px;
+  }
+
+  .bussiness {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .bussiness :where(.left, .right) {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  footer {
+    flex-direction: column !important;
+    height: 500px;
+  }
+
+  footer :where(.left, .right) {
+    width: 100% !important;
+  }
+
+  footer .auther {
+    top: 80%;
+  }
+}

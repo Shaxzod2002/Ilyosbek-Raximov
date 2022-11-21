@@ -1,0 +1,30 @@
+[
+  "../image/logo.jpg",
+  [
+    {
+      "id": "1",
+      "link": "Ish natijalarim",
+      "href": "#experience"
+    },
+    {
+      "id": "2",
+      "link": "Men haqimda",
+      "href": "#about"
+    },
+    {
+      "id": "3",
+      "link": "Biznes Motivatsiya",
+      "href": "#business"
+    },
+    {
+      "id": "4",
+      "link": "Siz uchun maxsus",
+      "href": "#suggestions"
+    },
+    {
+      "id": "5",
+      "link": "Xizmatlar",
+      "href": "#services"
+    }
+  ]
+]
